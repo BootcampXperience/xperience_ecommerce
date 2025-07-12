@@ -245,7 +245,7 @@ def create_stripe_button(cart, user_email, user_uid):
         </style>
         
         <div class="payment-container" style="display: flex; justify-content: flex-start; margin: 0.25rem 0px;">
-            <a href="{checkout_url}" target="_self">
+            <a href="{checkout_url}" target="_blank">
                 <button>
                     💳 Proceder al Pago
                 </button>
