@@ -143,7 +143,7 @@ def create_checkout_session(items, user_email):
         for item in items:
             line_items.append({
                 'price_data': {
-                    'currency': 'brl',
+                    'currency': 'usd',
                     'product_data': {
                         'name': item['name'],
                         'images': [item['image']],
