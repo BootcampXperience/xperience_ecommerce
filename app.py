@@ -22,11 +22,12 @@ if 'has_run' not in st.session_state:
     #service_account_key_path = 'serviceAccountKey.json'
     service_account_key_path = st.secrets["google_service_account"]
     collection_name = "usuarios"
-    st.session_state.redirect_uri = "http://localhost:8501"
+    st.session_state.redirect_uri = "https://xperience-ecommerce.streamlit.app"
 
     # --- Inicialización de Firebase ADMIN SDK ---
     if not firebase_admin._apps:
-        cred = credentials.Certificate(service_account_key_path)
+        service_account_dict = dict(service_account_key_path)
+        cred = credentials.Certificate(service_account_dict)
         firebase_admin.initialize_app(cred)
     st.session_state.db = firestore.client()
 
