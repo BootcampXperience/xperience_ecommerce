@@ -19,7 +19,8 @@ st.markdown(html_content, unsafe_allow_html=True)
 # Se ejecuta una única vez cuando carga la aplicación
 if 'has_run' not in st.session_state:
     st.session_state.has_run = True
-    service_account_key_path = 'serviceAccountKey.json'
+    #service_account_key_path = 'serviceAccountKey.json'
+    service_account_key_path = st.secrets["google_service_account"]
     collection_name = "usuarios"
     st.session_state.redirect_uri = "http://localhost:8501"
 
