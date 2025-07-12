@@ -166,7 +166,7 @@ def google_login_button():
     """
 
     button_html = f"""<button class="google-login-btn">{google_svg}Continue with Google</button>"""
-    return f"""<a href="{google_auth()}" target="_self" style="text-decoration: none;">{button_html}</a>"""
+    return f"""<a href="{google_auth()}" target="_blank" style="text-decoration: none;">{button_html}</a>"""
 
 # Función para recuperar el usuario basado en session_id
 def get_user_from_firestore(session_id):
